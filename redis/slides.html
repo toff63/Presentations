@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <meta charset="utf-8">
-<title>The Title Of Your Presentation</title>
+<title>Redis in 5 minutes!</title>
 
 <!-- Your Slides -->
 <!-- One section is one slide -->
@@ -12,27 +12,48 @@
 
 <section>
 	<div class="center_slide">
-		<h2><span class="initial">RE</span>mote <span class="initial">DI</span>ctionnary <span class="initial">S</span>erver</h2>
-		<h2><span class="initial">REDIS</span>tribute your workload among Redis servers</h2>
+		<h2><span class="redis_color">RE</span>mote <span class="redis_color">DI</span>ctionnary <span class="redis_color">S</span>erver</h2>
+		<h2><span class="redis_color">REDIS</span>tribute your workload among Redis servers</h2>
 	</div>
 </section>
 
 <section>
-	<div class="center_slide">
-    <h1>NoSQL</h1>
-</div>
+	<img class="resize" src="nosql.png" alt="scale vs complexity" />
 </section>
 
 <section>
     <h1>KEY VALUE</h1>
 	<div class="center_slide">
 		<ul>
-			<li>List => Stack</li>
-			<li>Set => unordered collections</li>
-			<li>Sorted Set => ordered collections</li>
-			<li>Hashes => memory optimized key/value</li>
+			<li><span class="redis_color">List</span> => Stack</li>
+			<li><span class="redis_color">Set</span> => unordered collections</li>
+			<li><span class="redis_color">Sorted Set</span> => ordered collections</li>
+			<li><span class="redis_color">Hashes</span> => memory optimized key/value</li>
 		</ul>
 </div>
+</section>
+
+<section>
+	<img class="resize" src="scaling-to-size-vs-complexity.png" alt="scale vs complexity" />
+</section>
+
+<section>
+	<div class="center_slide">
+<ul>
+    <li>50 simultaneous clients</li>
+		<li>100 000 requests</li>
+		<li>256 bytes string.</li>
+		<li>Linux 2.6, Xeon X3320 2.5Ghz.</li>
+		<li><span class="redis_color">110 000 SETs / sec</span></li>
+		<li><span class="redis_color">81 000 GETs / sec</span></li>
+		</ul>
+		</div>
+</section>
+
+<section>
+	<img class="resize" src="replication.png" alt="scale vs complexity" />
+</section>
+
 <!-- Your Style -->
 <!-- Define the style of you presentation -->
 
@@ -46,26 +67,33 @@
   section {
       /* The font from Google */
       font-family: 'Oswald', arial, serif;
-      font-size: 2em;
+      font-size: 3em;
   }
   h1, h2, h3 {
       margin-top: 50px;
       text-align: center;
   }
-	h1{
-		font-size: 75px;
-	}
+  
   ul {
       margin-left: 200px;
   }
   a { color: #FF0066; } a:hover {text-decoration: underline;}
+
+	ul {
+		list-style-type: none;
+		margin-left: 1em;
+	}
+
+	li {
+		padding: 0.1em;
+	}
   footer { position: absolute; bottom: 50px; right: 50px; }
 
 	.center_slide{
-		margin-top: 150px;
+		margin-top: 50px;
 	}
 
-	.initial{
+	.redis_color{
 		color: #d82a20;
 	}
 	
@@ -74,6 +102,11 @@
 		height: auto;
 	}
 	
+  .big{
+		font-size: 5em;
+		text-align: center;
+	}
+
   /* Transition effect */
   /* Feel free to change the transition effect for original
      animations. See here:
