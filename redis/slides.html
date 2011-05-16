@@ -11,14 +11,15 @@
 </section>
 
 <section>
-	<div class="center_slide">
-		<h2><span class="redis_color">RE</span>mote <span class="redis_color">DI</span>ctionnary <span class="redis_color">S</span>erver</h2>
-		<h2><span class="redis_color">REDIS</span>tribute your workload among Redis servers</h2>
-	</div>
+<ul class="big">
+		<li><span class="redis_color">RE</span>mote <span class="redis_color">DI</span>ctionnary <span class="redis_color">S</span>erver</li>
+		<li><span class="redis_color">REDIS</span>tribute your workload among Redis servers</li>
+</ul>
 </section>
 
 <section>
 	<img class="resize" src="nosql.png" alt="Not Only SQL" />
+	<footer><span class="source"><a href="http://notonlysql.com/nosql.png">source</a></span></footer>
 </section>
 
 <section>
@@ -26,24 +27,38 @@
 </section>
 
 <section>
-	<img class="resize" src="memory.jpg" alt="memory" />
+<div class="title">
+<span class="redis_color">KEY</span> - VALUE
+</div>
 </section>
 
 <section>
-    <h1>KEY VALUE</h1>
-	<div class="center_slide">
 		<ul>
+			<li><span class="redis_color">String</span></li>
 			<li><span class="redis_color">List</span> => Stack</li>
 			<li><span class="redis_color">Set</span> => unordered collections</li>
 			<li><span class="redis_color">Sorted Set</span> => ordered collections</li>
 			<li><span class="redis_color">Hashes</span> => memory optimized key/value</li>
 		</ul>
-</div>
 </section>
 
+<section>
+<div class="title">
+	Performance
+	</div>
+</section>
 
 <section>
-	<div class="center_slide">
+	<img class="resize" src="C.jpg" alt="C programming language" />
+	<footer><span class="source"><a href="http://tech-programs.net/wp-content/uploads/2010/10/C-gods-programming-language1.jpg">source</a></span></footer>
+</section>
+
+<section>
+	<img class="resize" src="memory.jpg" alt="memory" />
+	<footer><span class="source"><a href="http://4.bp.blogspot.com/_sVGtXNQ2lrg/TQVVqPyErsI/AAAAAAAAABg/JrDbrUqK5W0/s1600/PC3200%2BDDR%2BMemory.jpg">source</a></span></footer>
+</section>
+
+<section>
 <ul>
     <li>50 simultaneous clients</li>
 		<li>100 000 requests</li>
@@ -52,33 +67,56 @@
 		<li><span class="redis_color">110 000 SETs / sec</span></li>
 		<li><span class="redis_color">81 000 GETs / sec</span></li>
 		</ul>
-		</div>
 </section>
 
 <section>
 <h2>REPLICATION</h2>
 	<img class="resize" src="replication.jpg" alt="replication" />
+	<footer><span class="source"><a href="http://innovativemlmsuccess.com/wp-content/uploads/2010/04/Duplication1.jpg">source</a></span></footer>
 </section>
 
 <section>
-	<img class="resize" src="slave-leia.jpg" alt="replication" />
+	<img class="resize" src="slave-leia.jpg" alt="master slave" />
+	<footer><span class="source"><a href="http://www.myfreewallpapers.net/starwars/wallpapers/slave-leia.jpg">source</a></span></footer>
 	<details>Master Slave replication</details>
 </section>
 
+<section>
+	<img class="resize top_slide" src="synchronization.jpg" alt="synchronization" />
+	<footer><span class="source"><a href="http://images.beijing2008.cn/20080421/Img214316757.jpg">source</a></span></footer>
+	<details>Data Synchronization. Reading distribution</details>
+</section>
+
+<section>
+	<img class="resize top_slide" src="not-sharded.jpg" alt="Without sharding" />
+	<footer><span class="source"><a href="http://www.dbshards.com/wp-content/uploads/2010/06/ShardDiagram-5.jpeg">source</a></span></footer>
+	<details>Without sharding</details>
+</section>
+
+<section>
+	<img class="resize top_slide" src="shardedDatabase.jpg" alt="Sharding" />
+<footer><span class="source"><a href="http://www.dbshards.com/wp-content/uploads/2010/06/ShardDiagram-4.jpeg">source</a></span></footer>
+	<details>Sharding: writing distribution</details>
+</section>
 
 <!-- Your Style -->
 <!-- Define the style of you presentation -->
 
-<!-- Maybe a font from http://www.google.com/webfonts ? -->
-<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
 
 <style>
+	@font-face {
+  	font-family: 'Irish Grover';
+  	font-style: normal;
+  	font-weight: normal;
+		src: local('Irish Grover'), local('IrishGrover'), url('IrishGrover') format('woff');
+	}
+
   html { background-color: black; }
   body {background-color: white;}
   /* A section is a slide. It's size is 800x600, and this will never change */
   section {
       /* The font from Google */
-      font-family: 'Oswald', arial, serif;
+      font-family: 'Irish Grover', arial, serif;
       font-size: 2.5em;
   }
   h1, h2, h3 {
@@ -89,23 +127,36 @@
   ul {
       margin-left: 200px;
   }
-  a { color: #FF0066; } a:hover {text-decoration: underline;}
+  a { color: #FF0066; text-decoration: none; } a:hover {text-decoration: underline;}
 
 	ul {
 		list-style-type: none;
-		margin-left: 1em;
+		margin: 1em;
 	}
 
 	li {
-		padding: 0.1em;
+		padding: 0.5em;
 	}
-  footer { position: absolute; bottom: 50px; right: 50px; }
 
+	.big {
+		font-size: 1.5em;
+	}
+  
+  footer { position: absolute; bottom: 0px; right: 10px; }
+
+	.source {
+		font-size: 0.3em;
+		color: blue;
+	}
 	.center_slide{
-		margin-top: 50px;
+		margin-top: 25%;
 	}
 
-	.redis_color{
+	.top_slide{
+		margin-top: 10%;
+	}
+	
+.redis_color{
 		color: #d82a20;
 	}
 	
@@ -114,9 +165,10 @@
 		height: auto;
 	}
 	
-  .big{
-		font-size: 5em;
+  .title{
+		font-size: 3em;
 		text-align: center;
+		padding-top: 30%;
 	}
 
   /* Transition effect */
