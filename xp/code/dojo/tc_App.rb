@@ -1,6 +1,6 @@
 require "App"
-require "unit/test"
+require "test/unit"
 
-class TestApp
+class TestApp < Test::Unit::TestCase
   
 end
